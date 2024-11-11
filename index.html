@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinos del Valle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  fixed-top justify-content-between barra">
+            <div class="navbar-brand flex-grow-1">
+                <h1 ><a class="logo" href="#">Vinos del valle</a></h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="close"></button>
+                </div>
+                
+                <ul class="navbar-nav justify-content-end"> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empresa">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobreProducto">Sobre el producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <!-- Link para modal alumnos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Alumnos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal Alumnos-->
+    <div class="modal fade alumnos " id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalAlumnos">Alumnos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div >
+                    <div class="alumnosBody">
+                        <div class="imagenPersonal">
+                            <figure>
+                                <picture>
+                                    <img src="imgs/alumnos/miFoto.jpg" alt="Foto de la alumna Malena Pujadas">
+                                </picture>
+                            </figure>
+                        </div>
+                        <div class="infoPersonal">
+                            <div>
+                                <ul>
+                                    <li><strong>Nombre:</strong> Malena Pujadas</li>
+                                    <li><strong>Fecha de nacimiento:</strong> 11/09/2002</li>
+                                    <li><strong>Mail:</strong> malena.pujadas@davinci.edu.ar</li>
+                                </ul>
+                        
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                                <a href="https://x.com/"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alumnosBody">
+                    
+                        <div class="imagenPersonal">
+                            <figure>
+                                <picture>
+                                    <img src="imgs/alumnos/miFoto1.png" alt="Foto del alumno Agüero Maximo" >
+                                </picture>
+                            </figure>
+                        </div>
+                        <div class="infoPersonal">
+                            <div>
+                                <ul>
+                                    <li><strong>Nombre:</strong> Maximo Agüero</li>
+                                    <li><strong>Fecha de nacimiento:</strong> 29/05/2006</li>
+                                    <li><strong>Mail:</strong> maximo.aguero@davinci.edu.ar</li>
+                                </ul>
+                    
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                                <a href="https://x.com/"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <main>
+        <!--  SECCION CARRUSEL -->
+        <section id="diaposWeb" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#diaposWeb" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Diapositiva 1"></button>
+                <button type="button" data-bs-target="#diaposWeb" data-bs-slide-to="1"
+                    aria-label="Diapositiva 2"></button>
+                <button type="button" data-bs-target="#diaposWeb" data-bs-slide-to="2"
+                    aria-label="Diapositiva 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <picture>
+                        <source srcset="imgs/banner/vinedos540x700.png" media="(max-width: 500px)"> <!-- IMAGEN CELU -->
+                        <source srcset="imgs/banner/vinedos720x700.png" media="(max-width: 900px)"> <!-- IMAGEN TABLET -->
+                        <source srcset="imgs/banner/vinedos1366x780.png" media="(max-width: 1200px)"> <!-- IMAGEN PC -->
+                        <img src="imgs/banner/vinedos1920x780.png" alt="Viñedos del valle en mendoza"> <!-- IMAGEN PANTALLA MAS GRANDE -->
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source srcset="imgs/banner/uvas540x700.png" media="(max-width: 500px)"> <!-- IMAGEN CELU -->
+                        <source srcset="imgs/banner/uvas720x700.png" media="(max-width: 900px)"> <!-- IMAGEN TABLET -->
+                        <source srcset="imgs/banner/uvas1366.780.png" media="(max-width: 1200px)"> <!-- IMAGEN PC -->
+                        <img src="imgs/banner/uvas1920x780.png"  alt="Uvas utilizadas para nuestros vinos"> <!-- IMAGEN PANTALLA MAS GRANDE -->                   
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source srcset="imgs/banner/barriles540x700.png" media="(max-width: 500px)"> <!-- IMAGEN CELU -->
+                        <source srcset="imgs/banner/barriles720x700.png" media="(max-width: 900px)"> <!-- IMAGEN TABLET -->
+                        <source srcset="imgs/banner/barriles1366x780.png" media="(max-width: 1200px)"> <!-- IMAGEN PC -->
+                        <img src="imgs/banner/barriles1920x780.png"  alt="Barriles en nuestros viñedos"> <!-- IMAGEN PANTALLA MAS GRANDE -->                
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <!--  SECCION INTRO A LA EMPRESA -->
+        <section id="empresa">
+            <div >
+                <h2 class="titulo">Sobre Vinos del Valle</h2>
+            </div>
+            <div class="container d-flex flex-column-reverse flex-lg-row align-items-center align-items-lg-start" >
+                <article>
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="imgs/empresa/sobreVinosCelu.png"> <!-- FOTO CELU -->
+                            <img src="imgs/empresa/sobreVinos.png" alt="Uvas de nuestros viñedos utilizadas para nuestros vinos">
+                        </picture>
+                    </figure>
+                </article>
+                <article class="col-12  col-md-8 col-lg-6 col-xl-6 " id="texto">
+                    <p>Nuestra vinoteca, <strong>Vinos del Valle</strong> , nace del amor por la enología y la tradición vitivinícola. Ubicada
+                        en el corazón de una región vitícola de renombre, nos dedicamos a ofrecer una selecta variedad de
+                        <strong>vinos de alta calidad</strong>, elaborados con técnicas artesanales y un profundo respeto por la tierra. En
+                        Vinos del Valle, cada botella cuenta una historia, desde la uva que creció en nuestros viñedos hasta
+                        el brindis que compartirá momentos especiales.
+                    </p>
+                    <p>Fundada en 2010 por un grupo de apasionados del vino, nuestra vinoteca ha crecido con la misión de
+                        promover la <strong>cultura del vino</strong> y la <strong>sostenibilidad</strong>. Creemos firmemente en la conexión entre el
+                        productor y el consumidor, por lo que trabajamos directamente con viticultores locales que utilizan
+                        métodos respetuosos con el medio ambiente. Nuestros objetivos son ofrecer productos de calidad
+                        excepcional, educar a nuestros clientes sobre la diversidad del vino y fomentar el disfrute
+                        responsable.</p>
+                </article>
+            </div>
+        </section>
+        <!--  SECCION INTRO AL PRODUCTO -->
+        <section id="sobreProducto">
+            <div >
+                <h2 class="titulo">Información de nuestros productos</h2>
+            </div>
+            <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-start" id="producto">
+                <article class="col-12  col-md-8 col-lg-6 col-xl-6" id="textoProductos">
+                    <p>En Vinos del Valle, ofrecemos una <strong>cuidada selección de vinos</strong> que representan lo mejor de nuestra
+                        región. Desde tintos robustos y complejos hasta blancos frescos y aromáticos, cada etiqueta refleja
+                        el terruño y la dedicación de los viticultores. Nuestros productos son el resultado de una
+                        meticulosa selección de uvas, que se cosechan a mano y se fermentan utilizando técnicas
+                        tradicionales. Además, ofrecemos <strong>catas personalizadas</strong> y recomendaciones para ayudar a nuestros
+                        clientes a descubrir sus vinos ideales.
+                    </p>
+                </article>
+                <article id="imagenSobreProducto">
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="imgs/Sobreproducto/enologiaCelu.png"> <!-- FOTO CELU -->
+                            <img src="imgs/Sobreproducto/enologia.png" alt="Copa de vino tinto apoyada en nuestros barriles">
+                        </picture>
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <!--  SECCION PRODUCTOS -->
+        <section id="productos">
+            <div>
+                <h2 class="titulo">Nuestros Productos</h2>
+                <p class="textoProds">En Vinos del Valle te ofrecemos una cuidada selección de vinos de las mejores regiones vitivinícolas. Desde tintos y blancos hasta espumosos, cada botella ha sido elegida para ofrecerte la mejor calidad y diversidad. Encuentra el <strong>vino perfecto</strong> para cada momento, ya sea una ocasión especial o un buen brindis en casa.</p>
+            </div>
+            <article id="cards">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos/card1/vino_alpasion280x280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card1/vino_alpasion450x450.png" class="card-img-top" alt="Botella de vino Alpasion">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Alpasión Rosé Syrah</h5>
+                                <p class="card-text">Entrada suave y fresca, cierto volumen en boca, muy buena acidez y bajo grado alcohólico que lo hacen muy bebible. De estilo sabroso, este rosado 100% Syrah de alta acidez es ideal para verdaderas experiencias gastronómicas.</p>
+                                <p class="card-text">$31.200</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 2 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos/card2/zolzalTerroir280x280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card2/zorzalTerroir450x450.png" class="card-img-top" alt="Botella de vino Zorzal">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Zorzal Terroir Unico Malbec</h5>
+                                <p class="card-text">De rojo intenso con tonalidades violáceas. Muy complejo y fresco. En boca seduce por su gran volumen y textura muy particular dada por sus suelos calcáreos. Sus taninos son filosos, es un Malbec directo y con un final largo.</p>
+                                <p class="card-text">$60.000</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 3 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos/card3/alpasionMalbec280x280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card3/alpasionMalbec450x450.png" class="card-img-top" alt="Botella de vino Alpasion Malbec">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Alpasion Grand Malbec</h5>
+                                <p class="card-text">Maduro y audaz. Con colores violáceos intensos y aromas que recuerdan a ciruelas en compota, pasas e higos. En boca inundada por su gran cuerpo, es muy suave y untuoso. Su final es largo y muy equilibrado. Completan el bouquet toques de cacao y vainilla otorgados por la crianza en barricas.</p>
+                                <p class="card-text">$32.600</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 4 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos//card4/chacraBarda280x280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card4/chacraBarda450x450.png" class="card-img-top" alt="Botella de vino Chacra Barda">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Chacra Barda Chardonnay</h5>
+                                <p class="card-text">Una expresión más fresca y joven del Chardonnay, las notas brillantes de la acidez muy presentes y un contacto menos incipiente de la crianza, que a pesar de ser 11 meses, solo 19% del vino pasa por barrica francesa usada.</p>
+                                <p class="card-text">$45.000</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 5 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos/card5/vino_BadBrothers280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card5/vino_BadBrothers.jpg" class="card-img-top" alt="Botella de vino Bad Brothers">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Bad Brothers</h5>
+                                <p class="card-text">Bad Brothers Tovio Vino Torrontés Viognier Blend 750ml es un vino blanco complejo pero fácil de beber. Este vino presenta una graduación alcohólica del 13% y tiene un potencial de guarda de 2 años. Ideal para acompañar una variedad de platos.</p>
+                                <p class="card-text">$28.900</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 6 -->
+                    <div class="col-12 col-sm-6  col-lg-4">
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                            <figure>
+                                <picture>
+                                    <source media="(max-width: 750px)" srcset="imgs/productos/card6/abitoMalbec280x280.png"><!--  FOTO CELU -->
+                                    <img src="imgs/productos/card6/abitoMalbec450x450.png" class="card-img-top" alt="Botella de vino Abito">
+                                </picture>
+                            </figure>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Abito Malbec 2020</h5>
+                                <p class="card-text">Este Malbec presenta una gran intensidad colorante con tonos rojos y negros profundos. En nariz se perciben notas a frutos negros como higo y ciruela que se entrelazan con los aromas a chocolate y café aportado por su paso por roble.</p>
+                                <p class="card-text">$16.400</p>
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCarrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        
+
+        <!-- Modal Carrito-->
+        <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¡Agregado!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¡El producto se agregó al carrito!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  GALERIA DE FOTOS -->
+        <section id="galeria">
+            <article id="textoGaleria">
+                <h2 class="titulo">Galería</h2>
+                <p>Nuestra galería de fotos es un <strong>recorrido visual</strong> por el mundo de Vinos del Valle. Aquí podrás admirar
+                    la belleza de nuestros viñedos en diferentes estaciones del año, donde cada paisaje cuenta una
+                    historia de pasión y dedicación. También podrás ver los barriles en los que nuestros vinos maduran,
+                    una parte esencial del proceso que contribuye a su sabor y carácter únicos.</p>
+                <p>Además, compartimos imágenes de nuestras instalaciones, eventos y degustaciones que celebran el arte
+                    de la vinificación. Cada fotografía es una invitación a sumergirse en la cultura del vino, donde los
+                    momentos compartidos y las experiencias se convierten en memorias inolvidables.</p>
+            </article>
+            <article class="container-img">
+                <div class="box-img">
+                    <figure class="esconder">
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/bodega280x280.png">
+                            <img src="imgs/galeria/bodega480x480.png" alt="Imagen de nuestra vinoteca">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure class="esconder">
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/barril280x280.png">
+                            <img src="imgs/galeria/barril480x480.png" alt="Imagen de barril donde dejamos estacionar los vinos">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure class="esconder">
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/botella280x280.png">
+                            <img src="imgs/galeria/botella480x480.png" alt="Imagen de uno de nuestros vinos en una frapera">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure class="esconder">
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/botellas_vinos280x280.png">
+                            <img src="imgs/galeria/botellas_vinos480x480.png" alt="Imagen de nuestros vinos en nuestra vinoteca">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/uvas280x280.png">
+                            <img src="imgs/galeria/uvas480x480.png" alt="Imagen de las uvas utilizadas para los vinos tintos">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/vino_tinto280x280.png">
+                            <img src="imgs/galeria/vino_tinto480x480.png" alt="Imagen de nuestro vino tinto">
+                        </picture>
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure class="esconder">
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/vinos2280x280.png">
+                            <img src="imgs/galeria/vinos2480x480.png" alt="Imagen de nuestros vinos antes de ser trasladados a la vinoteca">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure>
+                        <picture>
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/vinedo280x280.png">
+                            <img src="imgs/galeria/vinedo480x480.png" alt="Imagen de uno de nuestros viñedos en Mendoza">
+                        </picture>
+                        
+                    </figure>
+                </div>
+                <div class="box-img">
+                    <figure>
+                        <picture>
+                            <!-- FALTA ADAPTAR -->
+                            <source media="(max-width: 950px)" srcset="imgs/galeria/degustacion280x280.png">
+                            <img src="imgs/galeria/degustacion480x480.png" alt="Imagen de una de las degustaciones hecha por nosotros">
+                        </picture>
+                        
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+
+
+        <!--  FORMULARIO -->
+        <section id="contacto">
+            <h2 class="titulo">¡Completá el formulario y vení a visitar nuestros viñedos!</h2>
+            <p class="textoForm">¿Tenés ganas de venir a pasar un maravilloso día junto a nosotros? No lo dudes más y anotate en nuestra agenda, ¡nos estaremos poniendo en contacto con vos lo antes posible! </p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="mb-3 ">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mail</label>
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" name="telefono" id="telefono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="fecha" class="form-label">Fecha elegida</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha">
+                </div>
+                <div class="mb-3">
+                    <span class="form-label">Comentario</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div class="boton">
+                    <input type="submit">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="container d-flex justify-content-between flex-md-row flex-column">            
+            <article id="copyright" >
+                <p class="text-start text-md-center ps-3 ps-md-0">Copyright © 2024 | Todos los derechos reservados</p>
+            </article>
+            <article id="menuFooter">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#empresa">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobreProducto">Sobre el producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li id="iconos">
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b143e878b4.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
